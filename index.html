@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      min-height: 100vh;
+      font-family: 'Raleway', sans-serif;
+      background:  hsl(229, 57%, 11%) url(./images/bg-desktop.png) no-repeat bottom;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: hsl(243, 100%, 93%);
+    }
+    .container{
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 100px;
+    }
+   
+    .logo{
+      width: 30%;
+      height: 120px;
+      border-radius: 15px;
+      border-top-right-radius:80px;
+      background-color: hsl(228, 56%, 26%);
+      padding: 30px;
+    }
+    .lists{
+      margin-top: 20px;
+      display: flex;
+    }
+    .lists img{
+      width: 100%;
+      object-fit: cover;
+    }
+    .file,.folder,.upload{
+      padding: 10px;
+      background-color: hsl(229, 57%, 11%);
+      border-radius: 10px;
+      text-align: center;
+      margin-right: 20px;
+    }
+    span{
+      font-weight: 700;
+      font-size: 16px;
+    }
+    aside{
+      box-sizing: border-box;
+      width: 55%;
+      border-radius: 15px;
+      background-color: hsl(228, 56%, 26%);
+      padding: 30px;
+    }
+    aside>*{
+      margin-bottom: 20px;
+    }
+    .progress{
+      width: 100%;
+      height: 17px;
+      background-color: hsl(229, 57%, 11%);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+    }
+    .progress-bar{
+      width: 75%;
+      height: 12px;
+      border-radius: 50px;
+      background: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%)) ;
+    }
+    .progress-point{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white;
+      margin-left: auto;
+      margin-right: 1px;
+    }
+    .info{
+      padding: 10px;
+      border-radius: 7px;
+      background-color: hsl(243, 100%, 93%);
+      color: hsl(229, 57%, 11%) ;
+      position: absolute;
+      top: 30%;
+      right: 22%;
+      border-bottom-right-radius: 0px;
+    }
+    @media(max-width:500px) {
+      body{
+        background: hsl(229, 57%, 11%) url(./images/bg-mobile.png) no-repeat bottom;
+      }
+      .container{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      .logo{
+        width: 80%;
+        margin-bottom: 20px;
+      }
+      aside{
+        box-sizing: content-box;
+        width: 80%;
+        margin-bottom: 60px;
+      }
+      .info{
+        top: 65%;
+        padding: 20px 30px;
+        border-bottom-right-radius: 7px;
+      }
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <div class="logo">
+      <img src="./images/logo.svg" alt="">
+     <div class="lists">
+        <div class="file">
+          <img src="./images/icon-document.svg" alt="">
+        </div>
+        <div class="folder">
+          <img src="./images/icon-folder.svg" alt="">
+        </div>
+        <div class="upload">
+          <img src="./images/icon-upload.svg" alt="">
+        </div>
+     </div>
+    </div>
+    <aside>
+      <p>You’ve used <span>815 GB</span> of your storage</p>
+      <div class="progress">
+        <div class="progress-bar">
+          <div class="progress-point"></div>
+        </div>
+      </div>
+      
+      <span> 0 GB</span>
+      <span>1000 GB</span>
+    </aside>
+    
+  </main>
+  <div class="info">
+    <h1>185 <span>GB LEFT</span></h1>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/thidarnyien">Thidar Nyein</a>.
+  </div>
+</body>
+</html>
